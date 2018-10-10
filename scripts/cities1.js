@@ -19,3 +19,37 @@ function coldCities(arr) {
 }
 let result = cities.filter(coldCities);
 console.log(result);
+
+//-----------Chris's explanation-----------------
+// function isCityCool(city) {
+//     return city.temperature < 70;
+//     // if (city[`temperature`] < 70) {
+//     //     return true;
+//     // } else{
+//     //     return false;
+//     // }
+// }
+
+// function getName(city) {
+//     return city.name;
+// }
+
+// function coolCities(citiesArray) {
+//     // 1. Create the new array
+//     // let resultingCities = [];
+
+//     // 3.  look through the citiesArray and find those whose temp is less than 70
+//     // citiesArray.forEach(function(city) {
+//     //     if (isCityCool(city)) {
+//     //         resultingCities.push(city);
+//     //     }
+//     // });
+//     // let citiesThatAreCool = citiesArray.filter(isCityCool);
+//     // return citiesThatAreCool.map(getName);
+//     return citiesArray
+//         .filter(isCityCool)
+//         .map(getName);
+
+//     // 2. return the new array
+//     // return resultingCities;
+// }
