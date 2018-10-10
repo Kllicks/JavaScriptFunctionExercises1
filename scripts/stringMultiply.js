@@ -30,13 +30,53 @@
 // }
 // console.log(strMultiply('abc', 5));
 
-function strMultiply(str, times) {
-    let arr = ``;
+//-------------My attempt---------------------
+// function strMultiply(str, times) {
+//     let arr = ``;
 
-    for (let i = 0; i < times; i++) {
-        // arr.push(str);
-        arr += str;
+//     for (let i = 0; i < times; i++) {
+//         // arr.push(str);
+//         arr += str;
+//     }
+//     console.log(arr);
+// }
+// strMultiply(`abc`, 5);
+
+//------------Chris's explanation-------------
+// Array(10).fill('abc').join('');
+
+function range(min, max) {
+    var arr = [];
+    for (var i = min; i < max; i++) {
+        arr.push(i);
     }
-    console.log(arr);
+    return arr;
 }
-strMultiply(`abc`, 5);
+
+// version 2: use a helper function
+function addOnToAString(currentResult, someString) {
+    // I can't refer to the result variable
+    let newResult = currentResult + someString;
+    return newResult;
+}
+
+function strMultiply(str, times) {
+    
+    const loopingArray = range(0, times);
+    
+    
+    //version 1: use the range function
+    // each time through, add on to a string
+    let result = ``;
+    // loopingArray.forEach( function () {
+    //     // result = result + str
+    //     addOnToAString(result, str);
+    // });
+
+    // version 3: using .map
+    let stringArray = loopingArray.map(function (item) {
+        return str;
+    });
+    return stringArray.join('');
+    // return result;
+}
