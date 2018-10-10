@@ -14,4 +14,8 @@ let cities = [
     { name: 'New York', temperature: 80.0 }
   ];
  
-  console.log(Object.keys(cities));
+function coldCities(arr) {
+    return arr.temperature < 70;
+}
+let result = cities.filter(coldCities);
+console.log(result);
