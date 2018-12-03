@@ -5,6 +5,13 @@
 // Test.assertDeepEquals(towerBuilder(2), [" * ","***"]);
 // Test.assertDeepEquals(towerBuilder(3), ["  *  "," *** ","*****"]);
 
+
 function towerBuilder(nFloors) {
-    // build here
-  }
+    let i = 0;
+    while (i < nFloors) {
+        console.log(` ` * (nFloors - i - 1) + `*` * (2 * i + 1));
+        i++;
+    }
+}
+
+towerBuilder(3);
